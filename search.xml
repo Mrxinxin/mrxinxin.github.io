@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[git使用]]></title>
+    <url>%2Fgit%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[显示单个文件的修改记录默认在git仓库中输入$ git log会显示所有文件的修改log记录。如果我们只想看项目中某一个文件的修改记录，可以输入以下命令：1$ git log -p xxx(文件名) 恢复单个文件到历史版本12$ git reset commit_id 文件路径$ git checkout -- 文件路径]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git拉取远程分支到本地]]></title>
+    <url>%2Fgit%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0%2F</url>
+    <content type="text"><![CDATA[一、查看远程分支1234git branch -r origin/HEAD -&gt; origin/master origin/dev origin/master 二、拉取远程分支并创建本地分支1git checkout -b 本地分支名 origin/远程分支名]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[克隆一个带子模块的项目]]></title>
+    <url>%2F%E5%85%8B%E9%9A%86%E4%B8%80%E4%B8%AA%E5%B8%A6%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[方法一1git clone --recursive 项目地址 Cloning into &apos;testblog&apos;... remote: Enumerating objects: 295, done. remote: Counting objects: 100% (295/295), done. remote: Compressing objects: 100% (243/243), done. remote: Total 295 (delta 38), reused 251 (delta 19) KiB/s Receiving objects: 100% (295/295), 1.63 MiB | 29.00 KiB/s, done. Resolving deltas: 100% (38/38), done. Submodule &apos;themes/next&apos; (https://github.com/bianxinxin/hexo-theme-next) registered for path &apos;themes/next&apos; Cloning into &apos;D:/Code/testblog/themes/next&apos;... remote: Counting objects: 12041, done. remote: Compressing objects: 100% (7/7), done. remote: Total 12041 (delta 0), reused 4 (delta 0), pack-reused 12034 Receiving objects: 100% (12041/12041), 12.99 MiB | 194.00 KiB/s, done. Resolving deltas: 100% (6963/6963), done. Submodule path &apos;themes/next&apos;: checked out &apos;54d65412c9351cf2ff11e6b0cc1ee426a9529f97&apos; 方法二1git clone 仓库地址 克隆该项目 克隆下来后只会发现子模块并没有一起克隆下来，需要将子模块也克隆下来。 git submodule init 初始化你的本地配置文件 git submodule update 从那个项目拉取所有数据并检出你上层项目里所列的合适的提交 报错处理 如果如下错误： 12Please make sure you have the correct access rightsfatal: Could not read from remote repository. 是因为没有子模块的操作权限导致的，添加权限。 git submodule update 报如下错误：123$ git submodule update --init fatal: Needed a single revision Unable to find current revision in submodule path ’xxx子模块库名xxx’ 解决12rm -rf xxx子模块库名xxxgit submodule update --init]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>submodule</tag>
+      </tags>
+  </entry>
+</search>
