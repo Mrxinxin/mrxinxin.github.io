@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bianxin.ml/"/>
-  <updated>2018-09-28T04:59:53.867Z</updated>
+  <updated>2018-12-21T08:48:36.087Z</updated>
   <id>http://bianxin.ml/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://bianxin.ml/git%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
     <id>http://bianxin.ml/git使用总结/</id>
     <published>2018-09-15T10:37:05.000Z</published>
-    <updated>2018-09-28T04:59:53.867Z</updated>
+    <updated>2018-12-21T08:48:36.087Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="显示单个文件的修改记录"><a href="#显示单个文件的修改记录" class="headerlink" title="显示单个文件的修改记录"></a>显示单个文件的修改记录</h2><p>默认在git仓库中输入$ git log会显示所有文件的修改log记录。<br>如果我们只想看项目中某一个文件的修改记录，可以输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log -p xxx(文件名)</span><br></pre></td></tr></table></figure></p><h2 id="恢复单个文件到历史版本"><a href="#恢复单个文件到历史版本" class="headerlink" title="恢复单个文件到历史版本"></a>恢复单个文件到历史版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset commit_id 文件路径</span><br><span class="line">$ git checkout -- 文件路径</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="显示单个文件的修改记录"><a href="#显示单个文件的修改记录" class="headerlink" title="显示单个文件的修改记录"></a>显示单个文件的修改记录</h2><p>默认在git仓库中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br></pre></td></tr></table></figure></p><p>会显示所有文件的修改log记录。<br>如果我们只想看项目中某一个文件的修改记录，可以输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log -p xxx(文件名)</span><br></pre></td></tr></table></figure></p><h2 id="恢复单个文件到历史版本"><a href="#恢复单个文件到历史版本" class="headerlink" title="恢复单个文件到历史版本"></a>恢复单个文件到历史版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset commit_id 文件路径</span><br><span class="line">$ git checkout -- 文件路径</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;显示单个文件的修改记录&quot;&gt;&lt;a href=&quot;#显示单个文件的修改记录&quot; class=&quot;headerlink&quot; title=&quot;显示单个文件的修改记录&quot;&gt;&lt;/a&gt;显示单个文件的修改记录&lt;/h2&gt;&lt;p&gt;默认在git仓库中输入$ git log会显示所有文件的修改log记
+        &lt;h2 id=&quot;显示单个文件的修改记录&quot;&gt;&lt;a href=&quot;#显示单个文件的修改记录&quot; class=&quot;headerlink&quot; title=&quot;显示单个文件的修改记录&quot;&gt;&lt;/a&gt;显示单个文件的修改记录&lt;/h2&gt;&lt;p&gt;默认在git仓库中输入&lt;br&gt;&lt;figure class=&quot;high
       
     
     </summary>
@@ -90,6 +90,33 @@
       <category term="git" scheme="http://bianxin.ml/tags/git/"/>
     
       <category term="submodule" scheme="http://bianxin.ml/tags/submodule/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算文件的MD5/SHA1/SHA256等校验值</title>
+    <link href="http://bianxin.ml/%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6%E7%9A%84MD5-SHA1-SHA256%E7%AD%89%E6%A0%A1%E9%AA%8C%E5%80%BC/"/>
+    <id>http://bianxin.ml/计算文件的MD5-SHA1-SHA256等校验值/</id>
+    <published>2017-01-21T09:17:21.000Z</published>
+    <updated>2018-12-21T09:24:03.611Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Windows10"><a href="#Windows10" class="headerlink" title="Windows10"></a>Windows10</h2><p>certutil支持的算法有：MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512<br>certutil的使用方法非常简单，只需要执行“certutil -hashfile 文件名 校验值类型”，即可计算出对应文件的校验值。<br>例如：计算D:\test.txt这个文件的MD5，可以执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -hashfile D:\test.txt MD5</span><br></pre></td></tr></table></figure></p><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ md5sum /works/test.txt </span><br><span class="line">$ sha1sum /works/test.txt </span><br><span class="line">$ sha256sum /works/test.txt</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Windows10&quot;&gt;&lt;a href=&quot;#Windows10&quot; class=&quot;headerlink&quot; title=&quot;Windows10&quot;&gt;&lt;/a&gt;Windows10&lt;/h2&gt;&lt;p&gt;certutil支持的算法有：MD2 MD4 MD5 SHA1 SHA256 SHA
+      
+    
+    </summary>
+    
+      <category term="校验值" scheme="http://bianxin.ml/categories/%E6%A0%A1%E9%AA%8C%E5%80%BC/"/>
+    
+    
+      <category term="md5" scheme="http://bianxin.ml/tags/md5/"/>
+    
+      <category term="sha256" scheme="http://bianxin.ml/tags/sha256/"/>
     
   </entry>
   

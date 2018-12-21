@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[git使用]]></title>
     <url>%2Fgit%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[显示单个文件的修改记录默认在git仓库中输入$ git log会显示所有文件的修改log记录。如果我们只想看项目中某一个文件的修改记录，可以输入以下命令：1$ git log -p xxx(文件名) 恢复单个文件到历史版本12$ git reset commit_id 文件路径$ git checkout -- 文件路径]]></content>
+    <content type="text"><![CDATA[显示单个文件的修改记录默认在git仓库中输入1$ git log 会显示所有文件的修改log记录。如果我们只想看项目中某一个文件的修改记录，可以输入以下命令：1$ git log -p xxx(文件名) 恢复单个文件到历史版本12$ git reset commit_id 文件路径$ git checkout -- 文件路径]]></content>
       <categories>
         <category>git</category>
       </categories>
@@ -32,6 +32,18 @@
       <tags>
         <tag>git</tag>
         <tag>submodule</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计算文件的MD5/SHA1/SHA256等校验值]]></title>
+    <url>%2F%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6%E7%9A%84MD5-SHA1-SHA256%E7%AD%89%E6%A0%A1%E9%AA%8C%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[Windows10certutil支持的算法有：MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512certutil的使用方法非常简单，只需要执行“certutil -hashfile 文件名 校验值类型”，即可计算出对应文件的校验值。例如：计算D:\test.txt这个文件的MD5，可以执行命令：1certutil -hashfile D:\test.txt MD5 Linux123$ md5sum /works/test.txt $ sha1sum /works/test.txt $ sha256sum /works/test.txt]]></content>
+      <categories>
+        <category>校验值</category>
+      </categories>
+      <tags>
+        <tag>md5</tag>
+        <tag>sha256</tag>
       </tags>
   </entry>
 </search>
