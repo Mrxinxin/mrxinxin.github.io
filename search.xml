@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IIS添加ssl证书]]></title>
+    <url>%2FIIS%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6%2F</url>
+    <content type="text"><![CDATA[1 申请证书，以腾讯云为例 登录腾讯云控制台并找到ssl证书管理,然后点击申请证书。 填写证书信息。 单击“下一步”，在域名身份验证页面单击“确认申请”。 切换到SSL证书管理控制台，在证书列表下找到目标证书（即刚才申请的证书），然后单击目标证书右侧的“详情” 2 配置DNS解析 在主域名那里添加相关的CNAME记录，用来做手动DNS验证。记录类型：TXT，主机记录：可以在证书详情中找到,线路：默认线路，记录值：可以在证书详情中找到，TTL：6003 安装证书 切换到目标证书详情，单击“下载”，把证书下载到本地，然后通过ftp工具上传至服务器指定目录（也可以在Windows客户机远程连接配置共享磁盘）。 在下载的证书里面，包含Apache、IIS、Tomcat、Nginx四种Web服务器的配置证书，此处我们只需要IIS的证书。 打开IIS控制台，在IIS中找到“服务器证书”,点击导入，找到证书的位置，输入密码（可在证书位置的同级找到一个keystorepass.txt的文件中找到）。 点击网站下需要绑定的站点，右击找到“编辑绑定”,弹出页面里选择https,端口443，ssl证书在下拉框中找到，确定即可]]></content>
+      <categories>
+        <category>运维</category>
+        <category>SSL</category>
+      </categories>
+      <tags>
+        <tag>IIS</tag>
+        <tag>Https</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git使用]]></title>
     <url>%2Fgit%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[显示单个文件的修改记录默认在git仓库中输入1$ git log 会显示所有文件的修改log记录。如果我们只想看项目中某一个文件的修改记录，可以输入以下命令：1$ git log -p xxx(文件名) 恢复单个文件到历史版本12$ git reset commit_id 文件路径$ git checkout -- 文件路径]]></content>

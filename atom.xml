@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bianxin.ml/"/>
-  <updated>2018-12-21T08:48:36.087Z</updated>
+  <updated>2018-12-25T04:39:38.882Z</updated>
   <id>http://bianxin.ml/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IIS添加ssl证书</title>
+    <link href="http://bianxin.ml/IIS%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6/"/>
+    <id>http://bianxin.ml/IIS添加ssl证书/</id>
+    <published>2018-12-25T03:02:26.000Z</published>
+    <updated>2018-12-25T04:39:38.882Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-申请证书，以腾讯云为例"><a href="#1-申请证书，以腾讯云为例" class="headerlink" title="1 申请证书，以腾讯云为例"></a>1 申请证书，以腾讯云为例</h2><ol><li><p>登录腾讯云控制台并找到ssl证书管理,然后点击申请证书。</p></li><li><p>填写证书信息。</p></li><li><p>单击“下一步”，在域名身份验证页面单击“确认申请”。</p></li><li><p>切换到SSL证书管理控制台，在证书列表下找到目标证书（即刚才申请的证书），然后单击目标证书右侧的“详情”</p><h2 id="2-配置DNS解析"><a href="#2-配置DNS解析" class="headerlink" title="2 配置DNS解析"></a>2 配置DNS解析</h2></li><li>在主域名那里添加相关的CNAME记录，用来做手动DNS验证。<br>记录类型：TXT，主机记录：可以在证书详情中找到,线路：默认线路，记录值：可以在证书详情中找到，TTL：600<h2 id="3-安装证书"><a href="#3-安装证书" class="headerlink" title="3 安装证书"></a>3 安装证书</h2></li><li><p>切换到目标证书详情，单击“下载”，把证书下载到本地，然后通过ftp工具上传至服务器指定目录（也可以在Windows客户机远程连接配置共享磁盘）。</p></li><li><p>在下载的证书里面，包含Apache、IIS、Tomcat、Nginx四种Web服务器的配置证书，此处我们只需要IIS的证书。</p></li><li><p>打开IIS控制台，在IIS中找到“服务器证书”,点击导入，找到证书的位置，输入密码（可在证书位置的同级找到一个keystorepass.txt的文件中找到）。</p></li><li>点击网站下需要绑定的站点，右击找到“编辑绑定”,弹出页面里选择https,端口443，ssl证书在下拉框中找到，确定即可</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-申请证书，以腾讯云为例&quot;&gt;&lt;a href=&quot;#1-申请证书，以腾讯云为例&quot; class=&quot;headerlink&quot; title=&quot;1 申请证书，以腾讯云为例&quot;&gt;&lt;/a&gt;1 申请证书，以腾讯云为例&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;登录腾讯云控制台并找到ssl证书管
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://bianxin.ml/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="SSL" scheme="http://bianxin.ml/categories/%E8%BF%90%E7%BB%B4/SSL/"/>
+    
+    
+      <category term="IIS" scheme="http://bianxin.ml/tags/IIS/"/>
+    
+      <category term="Https" scheme="http://bianxin.ml/tags/Https/"/>
+    
+  </entry>
   
   <entry>
     <title>git使用</title>
